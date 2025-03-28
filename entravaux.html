@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page en travaux</title>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Luckiest Guy', cursive;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        header {
+            background: black;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            border-bottom: 2px solid yellow;
+        }
+
+        header a {
+            text-decoration: none;
+            color: yellow;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .warning {
+            font-size: 36px;
+            animation: blink 1s infinite alternate;
+            color: yellow;
+        }
+
+        @keyframes blink {
+            from { opacity: 1; }
+            to { opacity: 0.5; }
+        }
+
+        .message {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .image {
+            width: 120px;
+            margin-top: 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: black;
+            text-align: center;
+            padding: 15px;
+            border-top: 2px solid yellow;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: white;
+        }
+
+        footer p:hover {
+            color: yellow;
+            transition: 0.3s;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="index.php">🏠 Retour à l'accueil</a>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main>
+        <img src="images/travaux.png" alt="Travaux" class="image">
+        <h1 class="warning">🚧 En travaux 🚧</h1>
+        <p class="message">Cette page est actuellement en construction. Merci de revenir plus tard !</p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Les Salamandres - Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>

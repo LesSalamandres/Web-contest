@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+body {
+    background: #002;
+    color: white; /* Tous les textes en blanc */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Hauteur minimum = 100% de l'écran */
+}
+
+main {
+    flex: 1; /* Prend tout l'espace disponible */
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 15px 20px;
+}
+
+.logo {
+    width: 50px; /* Ajuste la taille */
+    height: auto; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-link:hover .image {
+    transform: scale(1.1); /* Effet zoom au survol */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+/* Bouton Login */
+.login-btn {
+    border: 1px solid rgba(200, 200, 200, 0.3); /* Bordure grise fine */
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 5px;
+}
+
+.login-btn i {
+    color: rgba(200, 200, 200, 0.3); /* Icône grise fine */
+}
+
+/* Effet au survol */
+.login-btn:hover {
+    border-color: yellow;
+    color: yellow;
+}
+
+.login-btn:hover i {
+    color: yellow;
+}
+
+/* Bouton Contact */
+.contact-btn {
+    border: 2px solid yellow;
+    background-color: yellow;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-btn:hover {
+    background-color: #ffff99;
+    border-color: #ffff99;
+    color: gray;
+}
+
+/* Positionnement des nav */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-right {
+    display: flex;
+}
+
+/* Footer */
+footer {
+    background: black;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Pousse le footer en bas */
+}
+
+.text-yellow{
+    color: yellow;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.text-yellow:hover {
+    color: lightgray;
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-center, .nav-right {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+}
